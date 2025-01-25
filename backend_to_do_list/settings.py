@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # Add the new app to the INSTALLED_APPS setting
     'tasks',
     'corsheaders',
+    'drf_yasg',  # Para documentación de la API
 ]
 
 MIDDLEWARE = [

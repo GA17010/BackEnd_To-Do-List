@@ -50,9 +50,10 @@ This is the backend for a To-Do List application built with Django and Python.
 ## API Endpoints
 
 - `GET /api/tasks/` - List all tasks
-- `POST /api/tasks/add/` - Create a new task
-- `PUT /api/tasks/update/<id>/` - Update a task
-- `DELETE /api/tasks/delete/<id>/` - Delete a task
+- `GET /api/tasks/<int:id>/` - Retrieve a specific task
+- `POST /api/tasks/` - Create a new task
+- `PUT /api/tasks/<int:id>/` - Update a task
+- `DELETE /api/tasks/<int:id>/` - Delete a task
 
 ## Contributing
 
