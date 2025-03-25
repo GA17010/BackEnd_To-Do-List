@@ -8,6 +8,7 @@ gunicorn==23.0.0
 inflection==0.5.1
 packaging==24.2
 psycopg==3.2.4
+psycopg2-binary==2.9.9
 pytz==2024.2
 PyYAML==6.0.2
 sqlparse==0.5.3
