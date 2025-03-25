@@ -1,0 +1,1 @@
+web: gunicorn backend_to_do_list.wsgi --bind 0.0.0.0:$PORT
