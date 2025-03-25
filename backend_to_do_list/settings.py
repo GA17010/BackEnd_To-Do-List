@@ -86,22 +86,22 @@ WSGI_APPLICATION = 'backend_to_do_list.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # Configuración de base de datos
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # El tipo de base de datos
-        'NAME': os.getenv('DB_NAME'),  # El nombre de la base de datos
-        'USER': os.getenv('DB_USER'),  # El usuario de la base de datos
-        'PASSWORD': os.getenv('DB_PASSWORD'),  # La contraseña del usuario
-        'HOST': os.getenv('DB_HOST'),  # La dirección de la base de datos
-        'PORT': os.getenv('DB_PORT'),  # El puerto de la base de datos
-    }
-}
-
 # DATABASES = {
-#     'default': dj_database_url.config(
-#         default=os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
-#     )
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # El tipo de base de datos
+#         'NAME': os.getenv('DB_NAME'),  # El nombre de la base de datos
+#         'USER': os.getenv('DB_USER'),  # El usuario de la base de datos
+#         'PASSWORD': os.getenv('DB_PASSWORD'),  # La contraseña del usuario
+#         'HOST': os.getenv('DB_HOST'),  # La dirección de la base de datos
+#         'PORT': os.getenv('DB_PORT'),  # El puerto de la base de datos
+#     }
 # }
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL')
+    )
+}
 
 # DATABASES = {
 #     'default': {
